@@ -22,12 +22,11 @@
 }
 
 .cv {
-    background-color: darkgray;
+    background-color: #f1f1f1;
     color: black;
     overflow-y: scroll;
     padding-left: 10%;
-    position: absolute;
-    right: 0px;
+    width: 100%;
 }
 
 .name {
@@ -47,9 +46,16 @@
     font-weight: 700;
 }
 
+.subheader2 {
+    font-family: 'Montserrat';
+    font-size: 30px;
+    font-weight: 700;
+}
+
 .content {
     font-family: 'Montserrat';
     font-size: 13px;
+    margin-left: 10px;
 }
 
 .bottom {
@@ -67,4 +73,21 @@
 
 .spacer {
     height: 1vh;
+}
+
+.spacer2 {
+    height: 2vh;
+}
+
+.bar {
+    height: 2px;
+    background-color: white;
+    margin-right: 15px;
+    margin-left: -10px
+}
+
+.company {
+    font-family: 'Montserrat';
+    font-size: 13px;
+    margin-left: 10px;
 }
