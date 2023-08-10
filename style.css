@@ -4,90 +4,62 @@
     unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 
-.container {
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    top: 0;
+:root {
+    font-size: 16px;
+    font-family: 'Montserrat';
+    --text-primary: white;
+    --bg-primary: gray;
+    --nav-bg-primary: black;
+    --distance: 20rem;
 }
 
-.summary {
-    background-color: black;
+body {
     color: white;
+    background-color: gray;
     margin: 0;
-    padding-left: 25px;
-    width: 350px;
+    padding: 0;
 }
 
-.cv {
-    background-color: #f1f1f1;
-    color: black;
-    overflow-y: scroll;
-    padding-left: 10%;
-    width: 100%;
+body::-webkit-scrollbar {
+    width: 0.25rem;
 }
 
-.name {
-    font-family: 'Montserrat2', sans-serif;
-    font-size: 35px;
-    font-weight: 700;
+body::-webkit-scrollbar-track{
+    background: gray;
 }
 
-.title {
-    font-family: 'Montserrat';
-    font-size: 13px;
+body::-webkit-scrollbar-thumb {
+    background:black;
 }
 
-.subheader {
-    font-family: 'Montserrat';
-    font-size: 17px;
-    font-weight: 700;
+main {
+    margin-left: var(--distance);
+    padding: 1rem;
 }
 
-.subheader2 {
-    font-family: 'Montserrat';
-    font-size: 30px;
-    font-weight: 700;
+.navbar {
+    width: var(--distance);
+    height: 100vh;
+    position: fixed;
+    background: var(--nav-bg-primary);
 }
 
-.content {
-    font-family: 'Montserrat';
-    font-size: 13px;
-    margin-left: 10px;
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.bottom {
-    position: absolute;
-    bottom: 40px;
+.navbar-nav:last-child {
+    margin-top: auto;
+
 }
 
-.long_spacer {
-    height: 8vh;
-}
-
-.short_spacer {
-    height: 3vh;
-}
-
-.spacer {
-    height: 1vh;
-}
-
-.spacer2 {
-    height: 2vh;
-}
-
-.bar {
-    height: 2px;
-    background-color: white;
-    margin-right: 15px;
-    margin-left: -10px
-}
-
-.company {
-    font-family: 'Montserrat';
-    font-size: 13px;
-    margin-left: 10px;
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
 }
