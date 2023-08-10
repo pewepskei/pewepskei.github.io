@@ -21,7 +21,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-    width: 0.25rem;
+    width: 0.75rem;
 }
 
 body::-webkit-scrollbar-track{
@@ -35,6 +35,10 @@ body::-webkit-scrollbar-thumb {
 main {
     margin-left: var(--distance);
     padding: 1rem;
+}
+
+ul {
+    list-style-type: none;
 }
 
 .navbar {
@@ -61,5 +65,4 @@ main {
 .nav-link {
     display: flex;
     align-items: center;
-    height: 5rem;
 }
