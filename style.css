@@ -79,7 +79,12 @@ ul {
 .info-container:last-child {
     margin-top: auto;
 }
-
+/* 
 .info-container:first-child {
     margin: auto;
+} */
+
+.profile-pic {
+    width: 100%;
+    height: 100%:
 }
