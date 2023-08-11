@@ -43,6 +43,7 @@ ul {
 
 .navbar {
     width: var(--distance);
+    min-width: 15rem;
     height: 100vh;
     position: fixed;
     background: var(--nav-bg-primary);
@@ -68,23 +69,29 @@ ul {
 }
 
 .nav-item {
-    
     list-style: none;
 }
 
 .info-container {
-    background: red;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .info-container:last-child {
     margin-top: auto;
 }
-/* 
+
 .info-container:first-child {
-    margin: auto;
-} */
+    height: 12rem;
+    width: 100%;
+} 
 
 .profile-pic {
     width: 100%;
-    height: 100%:
+    height: 100%;
+    object-fit: cover;
+}
+
+.link-text {
+    color:white;
 }
