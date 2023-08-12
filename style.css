@@ -10,7 +10,7 @@
     --text-primary: white;
     --bg-primary: gray;
     --nav-bg-primary: black;
-    --distance: 23vw;
+    --distance: 20rem;
 }
 
 body {
@@ -43,7 +43,6 @@ ul {
 
 .navbar {
     width: var(--distance);
-    min-width: 18rem;
     height: 100vh;
     position: fixed;
     background: var(--nav-bg-primary);
@@ -84,7 +83,7 @@ ul {
 
 .info-container:first-child {
     display: flex;
-    height: 20rem;
+    height: 15rem;
     margin: 0;
     overflow: hidden;
     justify-content: center;
