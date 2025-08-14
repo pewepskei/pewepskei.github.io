@@ -1,168 +1,254 @@
 <!DOCTYPE html>
-<html lang="ja">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      <title>Philip Dumoran</title>
-      <meta name="description" content="The neighborhood code writer from Philippines">
-      <link rel="canonical" href="https://p5aholic.me">
-      <meta property="og:locale" content="ph_PH">
-      <meta property="og:type" content="website">
-      <meta property="og:site_name" content="Philip Dumoran">
-      <meta property="og:title" content="Philip Dumoran">
-      <meta property="og:description" content="The neighborhood code writer from Philippines">
-      <meta property="og:url" content="https:pewepskei.github.io">
-      <meta property="og:image" content="share-image.png">
-      <meta property="og:image:type" content="image/png">
-      <meta property="og:image:width" content="1200">
-      <meta property="og:image:height" content="630">
-      <meta name="twitter:card" content="summary_large_image">
-      <meta name="google" content="nositelinkssearchbox">
-      <meta name="google" content="notranslate">
-      <link rel="stylesheet" href="portfolio.css">
-      <link rel="icon" href="favicon.png">
-      <link rel="apple-touch-icon" href="favicon.png">
-   </head>
-   <body>
-      <div id="EnterView">
-         <div class="_t1">Philip Dumoran</div>
-         <div class="_t2">Portfolio</div>
-      </div>
-      <div id="Page">
-         <div id="Background">
-            <canvas></canvas>
-         </div>
-         <div class="mask" id="Mask">
-            <div class="mask_top"></div>
-            <div class="mask_bottom"></div>
-         </div>
-         <div class="frame" id="Frame">
-            <div class="frame_line frame_line-left"></div>
-            <div class="frame_line frame_line-right"></div>
-            <div class="frame_line frame_line-top"></div>
-            <div class="frame_line frame_line-bottom"></div>
-         </div>
-         <div class="theme" id="Theme" x-data>
-            <div class="theme_colors" @click="$store.app.toggleTheme()">
-               <div class="theme_btn" :class="{ 'is-selected': $store.app.theme === 'light' }">
-                  <div class="_box"></div>
-                  <div class="_text">Light</div>
-               </div>
-               <div class="theme_btn" :class="{ 'is-selected': $store.app.theme === 'dark' }">
-                  <div class="_box"></div>
-                  <div class="_text">Dark</div>
-               </div>
-            </div>
-            <!-- <div class="theme_btn" :class="{ 'is-selected': $store.app.fontStyle === 'mono' }" @click="$store.app.toggleFontStyle()">
-               <div class="_box"></div>
-               <div class="_text">Monospaced</div>
-            </div> -->
-         </div>
-         <header class="siteHeader" id="SiteHeader">
-            <h1 class="siteHeader_title">Philip Dumoran</h1>
-            <p class="siteHeader_label">Engineer - Developer  - Tinker</p>
-            <nav class="siteHeader_nav" x-data>
-               <ol>
-                  <li :class="{ 'is-selected': $store.app.currentPath === '/' }">
-                     <div class="_dot">&#x25cf;</div>
-                     <a class="_text" href="/">Home</a>
-                  </li>
-                  <li :class="{ 'is-selected': $store.app.currentPath === '/projects/' }">
-                     <div class="_dot">&#x25cf;</div>
-                     <a class="_text" href="/projects/">Projects</a>
-                  </li>
-                  <li :class="{ 'is-selected': $store.app.currentPath === '/info/' }">
-                     <div class="_dot">&#x25cf;</div>
-                     <a class="_text" href="/info/">Info</a>
-                  </li>
-                  <li :class="{ 'is-selected': $store.app.currentPath === '/contact/' }">
-                     <div class="_dot">&#x25cf;</div>
-                     <a class="_text" href="/contact/">Contact</a>
-                  </li>
-               </ol>
-            </nav>
-         </header>
-         <main class="content" id="Content" data-scroll="area">
-            <div class="content_inner" data-scroll="target">
-               <section class="page" data-page="home">
-                  <div class="page_content home">
-                     <p class="home_aboutme">
-                        <span>A 1998 kid born</span>
-                        <span>in Cebu, Philippines.</span>
-                        <span>I am a problem-solver</span>
-                        <span>that believes</span>
-                        <span>everything can</span>
-                        <span>be improved.</span>
-                        <span>Fueled by curiosity</span>
-                        <span>I like to</span>
-                        <span>learn new things</span>
-                        <span>and pursue new knowledge</span>
-                        <span>through experiments</span>
-                        <span>and different thoughts</span>
-                     </p>
-                  </div>
-               </section>
-               <section class="page" data-page="projects">
-                  <div class="page_content project">
-                     <div class="project_section">
-                        <h2 class="project_heading">&#x25a0; Projects (Design & Develop)</h2>
-                        <div class="project_list">
-                           <a class="project_item text-btn" href="https://github.com/pewepskei/queueSystem/" target="_blank">
-                              <div class="project_title">Cartel Studio</div>
-                              <div class="project_info">2023 / Commission</div>
-                           </a>
-                           <a class="project_item text-btn" href="/" target="_blank">
-                              <div class="project_title">GUI x EWS Toolbox</div>
-                              <div class="project_info">2022</div>
-                           </a>
-                        </div>
-                     </div>
-                  </div>
-               </section>
-               <section class="page" data-page="info">
-                  <div class="page_content info">
-                     <div class="info_item info_item-1">
-                        <div class="info_content">
-                           <ul>
-                              <li><a class="text-btn" href="https://www.facebook.com/philip.d.dumoran/" target="_blank" rel="noopener">Facebook ↗</a></li>
-                              <li><a class="text-btn" href="https://www.instagram.com/pewepskie/" target="_blank" rel="noopener">Instagram ↗</a></li>
-                              <li><a class="text-btn" href="https://www.linkedin.com/in/peebeedee/" target="_blank" rel="noopener">Linkedin ↗</a></li>
-                           </ul>
-                        </div>
-                     </div>
-                     <!-- <div class="info_item info_item-2">
-                        <div class="info_content">
-                           <ul>
-                              <li><a class="text-btn" href="https://experiments.p5aholic.me" target="_blank" rel="noopener">experiments.p5aholic.me ↗</a></li>
-                              <li><a class="text-btn" href="https://playground.p5aholic.me" target="_blank" rel="noopener">playground.p5aholic.me ↗</a></li>
-                           </ul>
-                        </div>
-                     </div> -->
-                     <div class="info_item info_item-3">
-                        <div class="info_content">
-                           <ul>
-                              <li><span class="is-light">National Licensure Passer<br></span><span>Granted April 2022</span></li>
-                              <li><span class="is-light">IECEP Robotics Competition<br></span><span>Champion 2018</span></li>
-                              <li><span class="is-light">Lear Innovation Olympics<br></span><span>2017</span></li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-               </section>
-               <section class="page" data-page="contact">
-                  <div class="page_content contact">
-                     <div class="contact_wrap">
-                        <ul>
-                           <li><span class="is-light">philip.d.dumoran@gmail.com<br></span></li>
-                           <br>
-                        </ul>
-                        <a class="contact_text en text-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeodkEclCoydA2jVdvZXCOBefeJ4WwhgvinO1UbO7tXR9RC1Q/viewform?usp=pp_url&entry.28460427=Name&entry.1918401061=Your+Email&entry.1159490320=Say+something+to+me" target="_blank" rel="noopener">Contact Form ↗</a>
-                    </div>
-                  </div>
-               </section>
-            </div>
-         </main>
-      </div>
-      <script src="main.js"></script>
-   </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Philip Bryan Dumoran – CV</title>
+  <style>
+    :root{
+      --bg:#fff;
+      --text:#1a1a1a;
+      --muted:#6b7280;
+      --accent:#111827;
+      --border:#e5e7eb;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial,sans-serif;color:var(--text);background:var(--bg);}
+
+    /* Layout */
+    .wrap{display:flex;min-height:100vh}
+    .sidenav{position:sticky;top:0;align-self:flex-start;width:370px;min-height:100vh;padding:32px 24px;background:#0f172a;color:#f8fafc;display:flex;flex-direction:column;gap:20px}
+    .brand{font-weight:700;font-size:30px;line-height:1.1}
+    .brand h2{display:block;color:#cbd5e1;margin-top:15px}
+    .nav a{display:block;padding:8px 0;color:#e5e7eb;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.08)}
+    .nav a:hover{color:#fff}
+    .top-grow{flex:1}
+    .grow{flex:4}
+    .email{margin-top:auto;padding-top:16px;border-top:1px solid rgba(255,255,255,.12)}
+    .email a{color:#93c5fd;text-decoration:none;word-break:break-all}
+
+    main{flex:1;margin:0 auto;padding:40px 28px}
+
+    /* Head */
+    .header h1{font-size:36px;margin:0}
+    .header .title{color:var(--muted);margin-top:6px}
+    .meta{margin-top:8px;color:var(--muted);font-size:14px}
+    .meta a{color:inherit;text-decoration:none}
+
+    /* Sections */
+    section{padding:28px 0;border-bottom:1px solid var(--border)}
+    h2{font-size:20px;letter-spacing:.3px;margin:0 0 16px}
+    .item{margin:14px 0 50px 50px}
+    .item h3{font-size:16px;margin:0 0 4px}
+    .item .when{color:var(--muted);font-size:13px}
+    ul{margin:8px 0 0 18px}
+    li{margin:6px 0}
+    .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+    .tag{font-size:12px;border:1px solid var(--border);padding:2px 8px;border-radius:999px;color:#374151}
+
+    /* Tiny fades */
+    [data-animate]{opacity:0;transform:translateY(8px);transition:opacity .5s ease,transform .5s ease}
+    .in{opacity:1 !important;transform:none !important}
+
+    /* Mobile */
+    @media (max-width: 860px){
+      .sidenav{position:fixed;inset:0 auto auto 0;width:100%;height:auto;min-height:unset;flex-direction:row;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid rgba(255,255,255,.12)}
+      .brand{font-size:18px}
+      .brand small{display:none}
+      .nav{display:flex;gap:16px}
+      .nav a{border:0;padding:0;font-size:14px}
+      .email{display:none}
+      main{padding-top:74px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <aside class="sidenav">
+      <div class="brand">Philip Bryan Dumoran<h2>Electronics Engineer</h2></div>
+      <div class="top-grow"></div>
+      <nav class="nav">
+        <a href="#experience">Experience</a>
+        <a href="#skills">Technical Skills</a>
+        <a href="#spare">Spare Time</a>
+        <a href="#education">Education</a>
+      </nav>
+      <div class="grow"></div>
+      <div class="email"><a href="mailto:philip.d.dumoran@gmail.com">philip.d.dumoran@gmail.com</a></div>
+    </aside>
+
+    <main>
+      <header class="header" id="top" data-animate>
+        <h1>Philip Bryan Dumoran</h1>
+        <div class="title">Electronics Engineer</div>
+        <div class="meta"><a href="mailto:philip.d.dumoran@gmail.com">philip.d.dumoran@gmail.com</a> · <a href="https://www.linkedin.com/in/peebeedee" target="_blank" rel="noreferrer">linkedin.com/in/peebeedee</a></div>
+      </header>
+
+      <section id="experience" data-animate>
+        <h2>Experience</h2>
+
+        <div class="item">
+          <h3>Full Stack Developer — ApexTech IT Solutions Inc.</h3>
+          <div class="when">September 2024 – Present</div>
+          <ul>
+            <li>Develop Live Streaming Web App for TVStartup Inc.</li>
+            <li>Maintain DevOps and created internal tools for monitoring.</li>
+            <li>Worked on proprietary software for streaming and stream management</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Classic Lexmark printers (&lt;2010)</span>
+            <span class="tag">Unreleased Lexmark/Xerox</span>
+            <span class="tag">VS Code</span>
+            <span class="tag">Android Studio</span>
+            <span class="tag">Linux (Vim)</span>
+            <span class="tag">Jenkins</span>
+            <span class="tag">Git / GitLab / Gerrit / SVN</span>
+            <span class="tag">Microsoft Office</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <h3>Firmware Engineer — Lexmark Research and Development Corp.</h3>
+          <div class="when">April 2022 – September 2024</div>
+          <ul>
+            <li>Develop features on device interfaces; integrate UI with subsystems and main system.</li>
+            <li>Collaborate across diverse internal/external teams; work autonomously to investigate and resolve device issues.</li>
+            <li>Built automation tools that shortened tasks and saved resources.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Classic Lexmark printers (&lt;2010)</span>
+            <span class="tag">Unreleased Lexmark/Xerox</span>
+            <span class="tag">VS Code</span>
+            <span class="tag">Android Studio</span>
+            <span class="tag">Linux (Vim)</span>
+            <span class="tag">Jenkins</span>
+            <span class="tag">Git / GitLab / Gerrit / SVN</span>
+            <span class="tag">Microsoft Office</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <h3>ISP/OSP Survey & Design Engineer — ComWorks Inc.</h3>
+          <div class="when">May 2021 – March 2022</div>
+          <ul>
+            <li>Surveyed villages and high‑rise sites for fiber deployment; secured locations for equipment placement.</li>
+            <li>Produced construction and layout plans with correct specs, attachments, gauges, and FODP port counts.</li>
+            <li>Led teams and coordinated with construction firms.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">AutoCAD</span>
+            <span class="tag">Laser measuring systems</span>
+            <span class="tag">MS Office / Google Workspace</span>
+            <span class="tag">Projects: Cebu City villages, Cebu Exchange Tower, JEG Tower</span>
+            <span class="tag">Trainings: Internal · Safety Officer 1</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <h3>Associate Junior Software Engineer — Accenture</h3>
+          <div class="when">Oct 2020 – Mar 2021</div>
+          <ul>
+            <li>Assisted SMBs migrating on‑prem servers to Microsoft Azure.</li>
+            <li>Supported IT teams with Microsoft services; resolved backend issues.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Microsoft Azure</span>
+            <span class="tag">Rave (internal tool)</span>
+            <span class="tag">Microsoft 365</span>
+            <span class="tag">Training: Server Migration</span>
+          </div>
+        </div>
+
+        <div class="item">
+          <h3>Research & Development Intern — Lear Corporation</h3>
+          <div class="when">Mar 2018 – Jun 2018</div>
+          <ul>
+            <li>Investigated technologies to improve product performance and cost.</li>
+            <li>Proposed fiber‑resin composite for fuse boxes: sturdier, lighter, and up to ~40% less resin.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <h3>Electronics Engineering Laboratory Assistant — University of San Jose – Recoletos</h3>
+          <div class="when">Mar 2014 – Oct 2019</div>
+          <ul>
+            <li>Maintained inventory and equipment (oscilloscopes, spectrum analyzers, communications modules).</li>
+            <li>Assisted professors during lab experiments; enforced safety and proper equipment handling.</li>
+            <li>Hands‑on experimentation expanded practical knowledge in circuits and wireless comms.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Oscilloscopes</span>
+            <span class="tag">Spectrum analyzer</span>
+            <span class="tag">LabVolt radar systems</span>
+            <span class="tag">Analog/Digital multimeters</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" data-animate>
+        <h2>Technical Skills</h2>
+        <ul>
+          <li><strong>Firmware & UI Integration:</strong> Device interface features; subsystem/main system comms.</li>
+          <li><strong>Dev Tools:</strong> VS Code, Android Studio, Linux (Vim), Jenkins, Git/GitLab/Gerrit/SVN.</li>
+          <li><strong>Network & CAD:</strong> Fiber survey/design, AutoCAD, laser measurement.</li>
+          <li><strong>Cloud & IT Support:</strong> Microsoft Azure migration and administration.</li>
+          <li><strong>Lab & Test:</strong> Oscilloscopes, spectrum analyzers, LabVolt, multimeters.</li>
+        </ul>
+      </section>
+
+      <section id="spare" data-animate>
+        <h2>Spare Time</h2>
+        <ul>
+          <li>Tinkering with electronics and small tooling/automation to speed up routine tasks.</li>
+          <li>Learning materials and manufacturing techniques relevant to product reliability and cost.</li>
+        </ul>
+      </section>
+
+      <section id="education" data-animate>
+        <h2>Education & Certifications</h2>
+        <div class="item">
+          <h3>Bachelor’s in Electronics Engineering — University of San Jose – Recoletos</h3>
+          <div class="when">Graduated 2019</div>
+        </div>
+        <div class="item">
+          <h3>Electronics Engineer Licensure Exam — Passed</h3>
+          <div class="when">April 2022</div>
+        </div>
+        <div class="item">
+          <h3>Selected Trainings</h3>
+          <ul>
+            <li>2022 — Basic Occupational Safety & Health (Safety Officer 1)</li>
+            <li>2018 — Saitama‑Cebu Comprehensive HR Monozukuri Project, Intensive Courses A & B</li>
+            <li>2017 — Japan‑Asia Youth Exchange Program in Science (SAKURA)</li>
+            <li>2017 — SEM & EDX Workshop</li>
+            <li>2017 — Engineering Innovations & Technology Conference by FLUOR</li>
+          </ul>
+        </div>
+      </section>
+
+      <footer class="meta" style="padding:20px 0" data-animate>
+        Last updated: <span id="updated"></span>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('.nav a').forEach(a=>{
+      a.addEventListener('click',e=>{e.preventDefault();document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth',block:'start'});});
+    });
+
+    // Fade-in on view
+    const io=new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+    },{threshold:0.1});
+    document.querySelectorAll('[data-animate]').forEach(el=>io.observe(el));
+
+    // Date
+    const d=new Date();
+    document.getElementById('updated').textContent=d.toLocaleDateString(undefined,{year:'numeric',month:'long',day:'numeric'});
+  </script>
+</body>
 </html>
+
